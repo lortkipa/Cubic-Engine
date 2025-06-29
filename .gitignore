@@ -3,6 +3,7 @@
 *.ilk
 *.pdb
 *.dll
+*.exp
 *.lib
 *.dll
 *.so
