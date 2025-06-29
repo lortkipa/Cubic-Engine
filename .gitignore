@@ -1,0 +1,8 @@
+# libraries, executables
+*.exe
+*.ilk
+*.pdb
+*.dll
+*.lib
+*.dll
+*.so
