@@ -21,7 +21,7 @@ CC := clang
 CFLAGS := -std=c23
 
 # preprocessor flags
-PFLAGS := -Isrc -I../../engine/src -Wl,-rpath,$(BUILD_DIR)
+PFLAGS := -Isrc -I../../engine/src
 
 # linker flags
 LFLAGS := -L$(BUILD_DIR)
@@ -40,12 +40,12 @@ PFLAGS += -D$(TARGET)
 # include os specific stuff
 ifeq ($(shell uname -s), Linux)
     include linux.mk
-else ifeq ($(shell uname -s), Windows_NT)
+else ifeq ($(OS), Windows_NT)
     include windows.mk
 endif
 
 # build scripts
-all: compile_flags build run
+all: build run
 
 build:
 	$(CC) $(SRCS) $(CFLAGS) $(PFLAGS) $(LFLAGS) $(SRC) $(LIBS) -o $(BUILD_DIR)/$(PROJECT)

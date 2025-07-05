@@ -1,9 +1,0 @@
--std=c23
--shared
--g
--O0
--Wall
--Wextra
--Isrc
--DDEBUG
--DLINUX

@@ -1,0 +1,7 @@
+[
+  {
+    "directory": "C:/Users/Nika/Cubic-Engine/engine/build/",
+    "file": "../src/test.c",
+    "command": "clang ../src/test.c -std=c23 -shared -g -O0 -Wall -Wextra -Isrc -DDEBUG -DWINDOWS -L../../bin    -o ../../bin/engine.dll"
+  }
+]

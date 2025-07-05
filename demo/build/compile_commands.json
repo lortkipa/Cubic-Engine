@@ -1,6 +1,6 @@
 [
   {
-    "directory": "/home/nikoloz/Cubic-Engine/demo/build/",
+    "directory": "C:/Users/Nika/Cubic-Engine/demo/build/",
     "file": "../src/main.c",
     "command": "clang ../src/main.c -std=c23 -g -O0 -Wall -Wextra -Isrc -I../../engine/src -Wl,-rpath,../../bin -DDEBUG -DLINUX -L../../bin  -lengine -o ../../bin/game"
   }

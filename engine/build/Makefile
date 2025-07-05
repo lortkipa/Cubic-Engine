@@ -1,6 +1,6 @@
 
 # project name
-PROJECT := libengine.so
+PROJECT :=
 
 # set target as debug if its not set
 TARGET ?= debug
@@ -27,7 +27,7 @@ PFLAGS := -Isrc
 LFLAGS := -L$(BUILD_DIR)
 
 # libraries
-LIBS := -lm
+LIBS :=
 
 # add flags that are target specific
 ifeq ($(TARGET), DEBUG)
@@ -40,12 +40,12 @@ PFLAGS += -D$(TARGET)
 # include os specific stuff
 ifeq ($(shell uname -s), Linux)
     include linux.mk
-else ifeq ($(shell uname -s), Windows_NT)
+else ifeq ($(OS), Windows_NT)
     include windows.mk
 endif
 
 # build scripts
-all: compile_flags build
+all: build
 
 build:
 	$(CC) $(SRCS) $(CFLAGS) $(PFLAGS) $(LFLAGS) $(SRC) $(LIBS) -o $(BUILD_DIR)/$(PROJECT)

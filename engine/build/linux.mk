@@ -1,4 +1,7 @@
 
+# project name
+PROJECT := libengine.so
+
 # preprocessor flags
 PFLAGS += -DLINUX
 
@@ -7,7 +10,3 @@ CFLGS += -fPIC
 
 # libraries to link
 LIBS +=
-
-# generate compile flags
-compile_flags:
-	@echo $(CFLAGS) $(PFLAGS) | tr ' ' '\n' > compile_flags.txt
