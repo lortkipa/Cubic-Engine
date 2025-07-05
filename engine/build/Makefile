@@ -1,6 +1,6 @@
 
 # project name
-PROJECT := game
+PROJECT := libengine.so
 
 # set target as debug if its not set
 TARGET ?= debug
@@ -18,16 +18,16 @@ SRCS := $(wildcard $(SRC_DIR)/*.c)
 CC := clang
 
 # compiler flags
-CFLAGS := -std=c23
+CFLAGS := -std=c23 -shared
 
 # preprocessor flags
-PFLAGS := -Isrc -I../../engine/src -Wl,-rpath,$(BUILD_DIR)
+PFLAGS := -Isrc
 
 # linker flags
 LFLAGS := -L$(BUILD_DIR)
 
 # libraries
-LIBS := -lengine
+LIBS := -lm
 
 # add flags that are target specific
 ifeq ($(TARGET), DEBUG)
@@ -45,10 +45,7 @@ else ifeq ($(shell uname -s), Windows_NT)
 endif
 
 # build scripts
-all: compile_flags build run
+all: compile_flags build
 
 build:
 	$(CC) $(SRCS) $(CFLAGS) $(PFLAGS) $(LFLAGS) $(SRC) $(LIBS) -o $(BUILD_DIR)/$(PROJECT)
-
-run:
-	./$(BUILD_DIR)/$(PROJECT)

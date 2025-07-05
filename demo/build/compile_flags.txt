@@ -1,0 +1,10 @@
+-std=c23
+-g
+-O0
+-Wall
+-Wextra
+-Isrc
+-I../../engine/src
+-Wl,-rpath,../../bin
+-DDEBUG
+-DLINUX

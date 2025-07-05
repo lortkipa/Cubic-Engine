@@ -3,7 +3,7 @@
 PFLAGS += -DLINUX
 
 # compiler flags
-CFLGS +=
+CFLGS += -fPIC
 
 # libraries to link
 LIBS +=

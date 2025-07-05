@@ -1,0 +1,7 @@
+[
+  {
+    "directory": "/home/nikoloz/Cubic-Engine/engine/build/",
+    "file": "../src/test.c",
+    "command": "clang ../src/test.c -std=c23 -shared -g -O0 -Wall -Wextra -Isrc -DDEBUG -DLINUX -L../../bin  -lm -o ../../bin/libengine.so"
+  }
+]
